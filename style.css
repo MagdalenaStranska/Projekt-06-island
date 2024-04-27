@@ -17,27 +17,167 @@ body {
     line-height: 1.6;
 }
 
+img {
+    width: 100%;
+}
 
-/* HLAVICKA */
+p {
+    margin: 0px 15px;
+    margin-bottom: 20px;
+}
 
-.titulek {
+h2 {
+    display: grid;
     font-family: 'Raleway', serif;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+h2::after {
+    content: "";
+    /* display: block;     */
+    width: 75px;
+    height: 5px;
+    background-color: rgb(16, 127, 231);
+    margin-top: 15px;
+    
+        
+}
+
+.popisek {
+    text-align: center;
+    color: gray;
+    font-family: 'Raleway', serif;
+    font-size: 0.8em;
+}
+
+.popisek a {
+    color: gray;    
 }
 
 
+
+
+/* HLAVICKA */
+.hlavicka {
+    background-image: url(images/island-hlavicka.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 15px;
+   
+}
+
+.titulek {
+    font-family: 'Raleway', serif;
+    text-align: center;
+    font-size: 48px;
+    
+}
+
+/* .perex {
+    border-bottom: 2px solid;
+    padding: 20px;
+} */
+
+.perex {
+    display: grid;
+    place-items: center;
+}
+
+.perex::after {
+    content: "";
+    display: block;    
+    width: 75px;
+    height: 2px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+.autor {
+    font-style: italic;
+    opacity: 75%;
+
+}
+
 /* MENU */
+.menu {
+    list-style-type: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Raleway', serif;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
 
 
+.menu a {
+    text-decoration: none;
+    color: gray;
+    /* border-bottom: 1px solid lightgray; */
+    
+}
 
+.menu a::after {
+    content: "";
+    display: block;    
+    width: 100%;
+    height: 0.3px;
+    background-color: lightgray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 /* OBSAH */
 
-
-
-
 /* FOTOGALERIE */
+.galerie {
+    font-weight: bold ;
+}
 
-
-
+.popisek-copy {
+    font-weight: normal;
+}
 
 /* PATICKA */
+
+.paticka {
+    color: gray;
+    font-size: 0.8em;
+}
+
+.paticka a {
+    color: gray;    
+}
+
+@media (min-width: 500px) {
+    .menu li {
+        display: inline-block;
+        text-align: center;
+        width: calc( (100% - 45px) / 4);
+    }
+
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .galerie img {
+      width: calc( (100% - 15px) / 2 );
+    
+    }
+
+    .galerie .popisek {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .galerie img {
+        width: calc( (100% - 15px) / 3 );
+    }
+
+    
+}
